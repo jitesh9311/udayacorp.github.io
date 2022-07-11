@@ -7,10 +7,91 @@
     <title>Animate Web</title>
 
     <!-- CSS Files -->
+        <link rel="stylesheet" href="CSS/about.css">
         <link rel="stylesheet" href="CSS/style.css">
-    <!-- CSS Files -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+   <style>
+
+.cube div span h2
+  {
+    position: absolute;
+    font-size: 4em !important;
+    color: #fff;
+    transform: translateZ(50px);
+  }
+   </style>
+   <!-- CSS Files -->
 </head>
 <body>
+    <section>
+        <h1><a href="index.html"> Home</a> // Contact</h1>
+      </section>
+      <section style="background-color: #151515;">
+        <div class="container reveal">
+            <div class="cube">
+                
+                <div class="top"></div>
+                <div>
+                  
+                <span style="--i: 1"><h2>CAN</h2><h2>CAN</h2></span>
+                <span style="--i: 0"><h2>NOTHING</h2><h2>NOTHING</h2></span>
+             
+                  <span style="--i: 2"><h2>STOP</h2><h2>STOP</h2></span>
+                  <span style="--i: 3"><h2> US!! </h2><h2>US!!</h2></span>
+
+                
+                
+                </div>
+              </div>
+        </div>
+
+      </section>
+      
+      <section>
+        <div class="container reveal">
+            <div class="contact">
+                <h2>Get In Touch!</h2>
+                <br>
+                <p>Nothing Can STOP US! No Matter... Google Get Banned.. It's Server Crash Or A New Reform Happen In This World!!</p>
+                <form action="">
+                    <div class="input">
+                        <input type="text" name="name" placeholder="Enter Your Name! ">
+                        <input type="email" name="email" placeholder="Enter Your Email! ">
+                    </div>
+                   
+                    <textarea name="message" id="" cols="30" rows="10" placeholder="Just Write Here & SEND!"></textarea>
+                    <button type="submit">SEND!</button>
+                </form>
+            </div> 
+        </div>
+      </section>
+
+    
+
+      
+  
+      <script type="text/javascript">
+      window.addEventListener('scroll', reveal);
+  
+      function reveal(){
+        var reveals = document.querySelectorAll('.reveal');
+  
+        for(var i = 0; i < reveals.length; i++){
+  
+          var windowheight = window.innerHeight;
+          var revealtop = reveals[i].getBoundingClientRect().top;
+          var revealpoint = 150;
+  
+          if(revealtop < windowheight - revealpoint){
+            reveals[i].classList.add('active');
+          }
+          else{
+            reveals[i].classList.remove('active');
+          }
+        }
+      }
+      </script>
     <!-- JavaScript -->
          <script src="JavaScript/index.js"></script>
     <!-- JavaScript -->
