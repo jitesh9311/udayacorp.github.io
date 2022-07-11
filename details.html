@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate Web</title>
+
+    <!-- CSS Files -->
+        <link rel="stylesheet" href="CSS/about.css">
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS Files -->
+</head>
+<body>
+    <section>
+        <h1><a href="index.html"> Home</a> // Details</h1>
+      </section>
+      <section>
+        <div class="container reveal">
+          <h2>Addiction Or Love?</h2>
+          <div class="cards">
+            <div class="text-card">
+              <h3>No Talk</h3>
+              <p>Having No Talk Whole Day.. Makes Us Remember & To Miss Other  Very Much Which Infact Led To See Person Status In Repeating Manner.. Is That Also In Case Of Addiction? Try To Notice..</p>
+            </div>
+            <div class="text-card">
+              <h3>Fight</h3>
+              <p>Why & How We Do Fight? Who Are We To FIGHT? Can Addiction Led Us To Do Fight? And  Even Though It Might Happen.. But That Much Emotional? Whyy?</p>
+            </div>
+            <div class="text-card">
+              <h3>Leave</h3>
+              <p>An Addiction Can Be Controlled If A Person Wants To.. But.. Why That's in Our Case? Cause More I Try To Go Far... More I Come Near.. But Why?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container reveal">
+          <h2>What is Love?</h2>
+          <div class="cards">
+            <div class="text-card">
+              <h3>Missing!</h3>
+              <p>I Don't Know.. If A Regual Addiction Can Led Us To Miss Someone.. And Also Missing But In Short Period Of Time.. Can A Person Miss Someone Even If Both Had A Talk Just 1-2hr Back?</p>
+            </div>
+            <div class="text-card">
+              <h3>Thoughts!</h3>
+              <p>An Addiction Can Led Us To Think About Something/Someone.. But That Much Time Or Everytime.. Does Addiction Have That Power Or Capability?????</p>
+            </div>
+            <div class="text-card">
+              <h3>Addiction!</h3>
+              <p>At Last.. Even Though There Is Not Much Difference.. But.. Still It Differ To Love.. An Addiction Can Be Love.. But Love Can't Be Addiction.. Cause A Love Just Be On The Superior Stage Of Addiction..!!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+ 
+    
+
+      
+  
+      <script type="text/javascript">
+      window.addEventListener('scroll', reveal);
+  
+      function reveal(){
+        var reveals = document.querySelectorAll('.reveal');
+  
+        for(var i = 0; i < reveals.length; i++){
+  
+          var windowheight = window.innerHeight;
+          var revealtop = reveals[i].getBoundingClientRect().top;
+          var revealpoint = 150;
+  
+          if(revealtop < windowheight - revealpoint){
+            reveals[i].classList.add('active');
+          }
+          else{
+            reveals[i].classList.remove('active');
+          }
+        }
+      }
+      </script>
+    <!-- JavaScript -->
+         <script src="JavaScript/index.js"></script>
+    <!-- JavaScript -->
+</body>
+</html>

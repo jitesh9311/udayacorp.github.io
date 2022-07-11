@@ -1,0 +1,287 @@
+:root
+{
+    --borderColor : rgba(255, 255, 255, 0.144);
+}
+
+body
+{
+    overflow: hidden;
+}
+
+header
+{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header .head
+{
+    height: 100vh;
+    width: 33.34%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+header .h-c-2
+{
+    border: 1px solid var(--borderColor);
+
+    display: flex;
+    align-items: center;
+    flex-direction:row;
+    justify-content: space-evenly;
+    color: #fff;
+}
+
+
+header .h-c-2 .h-c-p-1
+{
+    width: 50%;
+    height: 100vh;
+}
+
+header .h-c-2 .h-c-p-1 div, header .h-c-2 .h-c-p-2 div
+{
+    width: 100%;
+    height: 50vh;
+
+    border-bottom: 1px solid var(--borderColor);
+}
+
+header .h-c-2 .h-c-p-2
+{
+    width: 50%;
+    height: 100vh;
+
+    border-left: 1px solid var(--borderColor);
+
+
+}
+
+
+
+header .h-c-1::after, .h-c-3::after
+{
+    content: '';
+    width: 1px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.144);
+    position: absolute;
+    transform: translate(0%, 0%);
+}
+
+header .h-c-1::after
+{
+    left: 16%;
+}
+
+header .h-c-3::after
+{
+    left: 84%;
+}
+
+header .head .headChild
+{
+    width: 100%;
+    height: 49.9vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header .head .headChild a
+{
+    color: #fff;
+    position: fixed;
+    z-index: 5;
+
+    letter-spacing: 3px;
+
+    text-shadow: 0 0 15px #000;
+}
+
+
+
+
+
+
+header  .h-c-2 .fa
+{
+    font-size: 25px;
+    z-index: 45;
+}
+
+
+header .h-c-2 .title-link {
+    text-decoration: none;
+    height: inherit;
+    padding: 20px 0px;
+    display: inline-block;
+    position: relative;
+}
+
+header .h-c-2 .title-link::before {
+    transition: 300ms;
+    height: 5px;
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+}
+
+header .h-c-2 .title-link-ltr::before {
+    animation: title 5s infinite;
+    bottom: 10px;
+
+}
+
+
+
+
+
+
+
+
+header .head .activeHover::after
+{
+    content: '';
+    height: 100%;
+    width: 100%;
+
+    margin-right: auto;
+    background-position: center;
+    transition: 0.4s;
+}
+
+
+header .head .deActiveHover::after
+{
+    content: '';
+    height: 100%;
+    width: 0%;
+
+    margin-left: auto;
+    /* background-position: center; */
+    background-position:left;
+    transition: 0.4s;
+}
+
+header .head .hC1::after
+{
+    background-image: url(../Image/big.jpeg);
+
+}
+
+header .head .hC2::after
+{
+    background-image: url(../Image/1.jpg);
+}
+
+header .head .hC3::after
+{
+    background-image: url(../Image/2.jpg);
+}
+
+header .head .hC4::after
+{
+    background-image: url(../Image/7.jpg);
+}
+
+
+
+header .hC2, .hC4
+{
+    border-top: 1px solid var(--borderColor);
+}
+
+@keyframes title
+{0%
+    {
+        width: 0%;
+    }
+    50%
+    {
+
+    }
+    100%
+    {
+        width: 100%;
+    }
+}
+
+
+.warn-h1
+{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+}
+
+
+.content {
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.content h2 {
+	color: rgb(0, 0, 0);
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+
+.content h2:nth-child(1) {
+	color: transparent;
+	-webkit-text-stroke: 2px rgb(255, 255, 255);
+}
+
+.content h2:nth-child(2) {
+	color: rgb(255, 255, 255);
+	animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}

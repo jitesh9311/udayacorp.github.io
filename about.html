@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate Web</title>
+
+    <!-- CSS Files -->
+        <link rel="stylesheet" href="CSS/about.css">
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS Files -->
+</head>
+<body>
+    <section>
+        <h1><a href="index.html"> Home</a> // About</h1>
+      </section>
+      <section style="background-color: #151515;">
+        <div class="container reveal">
+            <div class="cube">
+                
+                <div class="top"></div>
+                <div>
+                  
+                <span style="--i: 1"><h2>Love</h2><h2>Love</h2></span>
+                <span style="--i: 0"><h2>I</h2><h2>I</h2></span>
+             
+                  <span style="--i: 2"><h2>You</h2><h2>You</h2></span>
+                  <span style="--i: 3"><h2> <i class="fa fa-heart"></i> </h2><h2><i class="fa fa-heart"></i></h2></span>
+
+                
+                
+                </div>
+              </div>
+        </div>
+
+      </section>
+      
+      <section>
+        <div class="container reveal">
+            <div class="contBox">
+                <h2>To Describe!</h2>
+                <p>I Remember The First Day We Met! <br>
+                   That Day I Found A Person.. With Having Such Beautiful Qualities..!!
+                   And In Fact I Can't Describe Them!!
+                   <br><br>
+                   I Just Know... That I Didn't Knew We Would Be That Much Connected As Now We Are!
+                   And One More Thing is that... I Love All The Qualities Which is owned by the person!  
+                   I Love The Way Of Talking, Laughing, Sulking Even The Way The Person Deny & Almost All The Things...!
+                   <br><br>
+                   And For Sure.. I Am In Love With That Person! 
+                </p>
+            </div>
+        </div>
+      </section>
+      <section style="background-color: #151515;">
+        <div class="container reveal">
+            <div class="drop">
+                <i class="fa fa-heart"></i>
+                <i class="fa fa-heart"></i> 
+            </div>
+        
+        </div>
+      </section>
+    
+
+      
+  
+      <script type="text/javascript">
+      window.addEventListener('scroll', reveal);
+  
+      function reveal(){
+        var reveals = document.querySelectorAll('.reveal');
+  
+        for(var i = 0; i < reveals.length; i++){
+  
+          var windowheight = window.innerHeight;
+          var revealtop = reveals[i].getBoundingClientRect().top;
+          var revealpoint = 150;
+  
+          if(revealtop < windowheight - revealpoint){
+            reveals[i].classList.add('active');
+          }
+          else{
+            reveals[i].classList.remove('active');
+          }
+        }
+      }
+      </script>
+    <!-- JavaScript -->
+         <script src="JavaScript/index.js"></script>
+    <!-- JavaScript -->
+</body>
+</html>
