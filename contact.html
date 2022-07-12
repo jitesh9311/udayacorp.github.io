@@ -54,15 +54,18 @@
                 <h2>Get In Touch!</h2>
                 <br>
                 <p>Nothing Can STOP US! No Matter... Google Get Banned.. It's Server Crash Or A New Reform Happen In This World!!</p>
-                <form action="">
+                <form onsubmit="sendEmail(); reset(); return false;">
                     <div class="input">
                         <input type="text" name="name" placeholder="Enter Your Name! ">
-                        <input type="email" name="email" placeholder="Enter Your Email! ">
+                        <input type="email" name="email" placeholder="Enter Your Email! " id="email">
                     </div>
                    
                     <textarea name="message" id="" cols="30" rows="10" placeholder="Just Write Here & SEND!"></textarea>
                     <button type="submit">SEND!</button>
                 </form>
+
+      
+
             </div> 
         </div>
       </section>
@@ -93,7 +96,23 @@
       }
       </script>
     <!-- JavaScript -->
-         <script src="JavaScript/index.js"></script>
+   
+         <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+    function sendEmail(){
+  Email.send({
+      Host : "smtp.gmail.com",
+      Username : "jiteshwar9311@gmail.com",
+      Password : "cwaofcanoqbdqprl",
+      To : 'jiteshwar9311@gmail.com',
+      From : document.getElementById('email').value,
+      Subject : "SUBJECT TEXT",
+      Body : "And this is the body"
+  }).then(
+    message => alert("Message Sent SuccessFully!")
+  );
+}
+    </script>
     <!-- JavaScript -->
 </body>
 </html>
